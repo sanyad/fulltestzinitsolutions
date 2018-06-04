@@ -1,0 +1,389 @@
+@import "vars.sass"
+.top-line
+	min-height: 144px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.logo-container
+		@media (max-width: 767px)
+			position: absolute
+			top: 20px
+.personal-area
+	display: flex
+	align-items: center
+	width: 160px
+	justify-content: space-evenly
+	@media (max-width: 767px)
+		position: absolute
+		right: 0
+		top: 20px
+	&--login, &--bug
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+		color: $font-color
+		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: $font-color
+		img
+			margin-bottom: 5px
+	&--bug
+		&::after
+			content: "1"
+			position: absolute
+			top: -9px
+			right: -5px
+			width: 18px
+			height: 18px
+			border-radius: 9px
+			background-color: $brand-color
+			display: flex
+			align-items: center
+			justify-content: center
+			font: 700 10px "Montserrat-Bold"
+			color: $wt
+.wrap-input-search
+	max-width: 430px
+	@media (max-width: 767px)
+		width: 100%
+		margin: 125px 0 20px
+		max-width: none
+	.form-control
+		height: 36px
+		background-color: #f0f0f0
+	.input-group-btn
+		.btn-default
+			border: none
+			padding: 0
+			width: 36px
+			height: 36px
+			background-color: $brand-color
+			display: flex
+			align-items: center
+			justify-content: center
+.header-menu
+	max-width: 1230px
+	width: 100%
+	margin: 0 auto
+	background-color: #dceef7
+	display: flex
+	align-items: center
+	min-height: 46px
+	padding: 0 30px
+	position: relative
+	.top_mnu
+		display: none
+		z-index: 100
+		ul
+			padding: 0 15px
+			position: absolute
+			width: 100%
+			display: flex
+			flex-direction: column
+			left: 0
+			top: 100%
+			background-color: #dceef7
+
+			li
+				a
+					font-size: 16px
+					color: #2f2f2f
+					text-decoration: none
+					transition: all .3s
+					line-height: 2
+					display: block
+					&:hover, &:active
+						text-decoration: none
+						color: $brand-color
+	#menu
+		display: flex
+		width: 100%
+		max-width: 900px
+		align-items: center
+		justify-content: space-between
+		@media (max-width: 1199px)
+			max-width: 750px
+		li
+			a
+				font-size: 16px
+				color: #2f2f2f
+				text-decoration: none
+				transition: all .3s
+				&:hover, &:active
+					text-decoration: none
+					color: $brand-color
+
+	.selectFontPage
+		margin-left: auto
+		display: flex
+		align-items: center
+		justify-content: center
+		@media (max-width: 1199px)
+			position: absolute
+			right: 0
+		span
+			color: $brand-color
+			font-size: 16px
+			margin-right: 15px
+		.fontPage
+			width: 28px
+			height: 28px
+			border-radius: 15px
+			background-color: transparent
+			display: flex
+			align-items: center
+			justify-content: center
+			color: $wt
+			text-decoration: none
+			transition: all .3s
+			font-size: 10px
+			margin: 0 10px
+			&:hover, &.active
+				text-decoration: none
+				background-color: $brand-color
+header
+	.container
+		position: relative
+		padding: 0
+		.slider
+			position: relative
+			height: 450px
+			&--item
+				height: 450px
+				outline: none
+				box-shadow: none
+			.slick-dots
+				display: flex
+				position: absolute
+				bottom: 25px
+				left: 50%
+				transform: translateX(-50%)
+				li
+					display: flex
+					align-items: center
+					margin: 0 5px
+					button
+						width: 15px
+						padding: 0
+						height: 15px
+						font-size: 0
+						border: 3px solid #919191
+						border-radius: 10px
+						background-color: $wt
+						transition: all .3s
+						outline: none
+				.slick-active
+					button
+						border-color: $brand-color
+			&--title
+				font: 700 36px "Montserrat-Bold"
+				color: #2f2f2f
+				text-align: center
+				margin-top: 135px
+			&--text
+				font: 400 16px "Montserrat-Regular"
+				text-align: center
+				max-width: 470px
+				margin: 15px auto 0
+				line-height: 1.5
+		.prev-btn
+			position: absolute
+			left: 30px
+			top: 50%
+			transform: translateY(-50%)
+			cursor: pointer
+			@media (max-width: 767px)
+				left: 15px
+		.next-btn
+			position: absolute
+			right: 30px
+			top: 50%
+			transform: translateY(-50%)
+			cursor: pointer
+			@media (max-width: 767px)
+				right: 15px
+
+.section
+	&--title
+		font: 700 36px "Montserrat-Bold"
+		color: #2f2f2f
+		text-align: center
+		margin: 70px 0 50px
+	&--news
+		min-height: 306px
+		border: 1px solid #f0f0f0
+		margin-bottom: 30px
+		display: flex
+		@media (max-width: 600px)
+			flex-direction: column
+		.img-container
+			width: 285px
+			height: 306px
+			@media (max-width: 600px)
+				width: 100%
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.news-description
+			width: calc(100% - 285px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 0 10px
+			@media (max-width: 600px)
+				width: 100%
+			&--title
+				text-transform: uppercase
+				font: 400 20px "Montserrat-Regular"
+				color: #2f2f2f
+				line-height: 1.5
+				margin: 30px 0 15px
+				text-align: center
+				position: relative
+				z-index: 150
+			&--text
+				text-align: center
+				line-height: 1.5
+			&--btn
+				width: 100%
+				max-width: 180px
+				height: 42px
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: $brand-color
+				color: $wt
+				margin-top: auto
+				margin-bottom: 53px
+				@media (max-width: 1199px)
+					margin-bottom: 25px
+				@media (max-width: 600px)
+					margin-top: 30px
+		&.flexOrder
+			.img-container
+				order: 2
+				@media (max-width: 991px)
+					order: 1
+			.news-description
+				order: 1
+				@media (max-width: 991px)
+					order: 2
+	&--text
+		font: 400 16px "Montserrat-Regular"
+		text-align: center
+		max-width: 550px
+		margin: 15px auto 0
+		line-height: 1.5
+	&--icon
+		text-align: center
+		margin-top: 20px
+.vision
+	.container
+		background: transparent
+		position: relative
+		height: 342px
+	.section--title
+		margin-bottom: 20px
+.vision-bg-parallax
+	height: 342px
+	position: absolute
+	width: 100%
+	max-width: 1230px
+	z-index: -1
+	top: -305px
+	left: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.section-line
+	position: relative
+	min-height: 64px
+	display: flex
+	align-items: center
+	justify-content: center
+	@media (max-width: 767px)
+		display: flex
+		flex-direction: column
+	@media (max-width: 425px)
+		height: 140px
+	.color-line
+		height: 54px
+		content: ""
+		position: absolute
+		top: 5px
+		left: 0
+		width: 100%
+		background-color: #dceef7
+		z-index: 0
+		@media (max-width: 767px)
+			height: 110px
+		@media (max-width: 425px)
+			height: 130px
+	img
+		z-index: 1
+		position: relative
+		margin-right: 23px
+		@media (max-width: 767px)
+			margin-right: 0
+			margin-bottom: 10px
+			margin-top: 15px
+	span
+		font: 900 16px "Montserrat-Bold"
+		color: #000000
+		z-index: 1
+		text-transform: uppercase
+		position: relative
+		margin-right: 7px
+		@media (max-width: 767px)
+			margin-bottom: 10px
+	p
+		font: 300 16px "Montserrat-Light"
+		color: #2f2f2f
+		z-index: 1
+		position: relative
+		margin: 0
+		@media (max-width: 425px)
+			text-align: center
+		a
+			display: inline-block
+			color: #2f2f2f
+			text-decoration: underline
+.footer
+	.container
+		border-top: 1px solid #f0f0f0
+		padding-top: 20px
+		padding-bottom: 20px
+		min-height: 212px
+	.accountTitle
+		padding-left: 43px
+		@media (max-width: 767px)
+			padding: 0
+	&--title
+		font-size: 14px
+		color: #2f2f2f
+		text-transform: uppercase
+		line-height: 2.5
+		@media (max-width: 767px)
+			text-align: center
+			margin: 15px 0
+	&--mnu
+		display: flex
+		flex-direction: column
+		line-height: 2
+		a
+			color: #919191
+			text-decoration: none
+			font-size: 14px
+			transition: all .3s
+			line-height: 2
+			@media (max-width: 767px)
+				text-align: center
+			&:hover
+				color: $brand-color
+				text-decoration: none
+			i
+				margin-right: 29px

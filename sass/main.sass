@@ -1,0 +1,152 @@
+@import "vars.sass"
+@import "icons-styles"
+
+//Load Libs SASS
+@import "app/libs/font-awesome/scss/font-awesome.scss"
+@import "app/libs/animate/animate.sass"
+@import "app/libs/slick-carousel/slick/slick.scss"
+@import "app/libs/bootstrap/assets/stylesheets/_bootstrap.scss"
+
+*::-webkit-input-placeholder
+	color: #919191
+	opacity: 1
+	font: 400 14px "Montserrat-Regular"
+
+*:-moz-placeholder
+	color: #919191
+	opacity: 1
+	font: 400 14px "Montserrat-Regular"
+
+*::-moz-placeholder
+	color: #919191
+	opacity: 1
+	font: 400 14px "Montserrat-Regular"
+
+*:-ms-input-placeholder
+	color: #919191
+	opacity: 1
+	font: 400 14px "Montserrat-Regular"
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #919191
+	font: 400 14px "Montserrat-Regular"
+body input:required:valid,
+body textarea:required:valid
+	color: #919191
+	font: 400 14px "Montserrat-Regular"
+
+//Custom Styles Here
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+body
+	font: 400 14px "Montserrat-Regular"
+	line-height: 1.5
+	color: $font-color
+	background-color: #f0f0f0
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+
+
+.container
+	width: 100%
+	max-width: 1230px
+	padding: 0 30px
+	background: $wt
+	@media (max-width: 767px)
+		padding: 0 15px
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+.fz12
+	font-size: 12px !important
+.fz14
+	font-size: 14px !important
+	color: $black !important
+.toggle_mnu
+	width: 45px
+	height: 45px
+	z-index: 100
+	border: none
+	outline: none
+	position: relative
+	background-color: transparent
+	padding: 0
+
+$w: 34px
+$h: 3px
+
+.sandwich
+	width: $w
+	height: $w
+	position: absolute
+	top: 12px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	display: block
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w
+	height: $h
+	background: $brand-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	background: $brand-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+	display: block
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	background: $brand-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+	display: block
+
+.sandwich.active .sw-topper
+	top: 8px
+	transform: rotate(45deg)
+
+.sandwich.active .sw-bottom
+	top: 5px
+	transform: rotate(-45deg)
+
+.sandwich.active .sw-footer
+	opacity: 0
+	top: 0
+	transform: rotate(180deg)
+.bg-white
+	background-color: $wt
+.bg-gray
+	background-color: #f0f0f0
+.center
+	text-align: center
+.copyright
+	font: 300 12px "Montserrat-Light"
+	color: #919191
+//ALWAYS END
+//@import "media"
